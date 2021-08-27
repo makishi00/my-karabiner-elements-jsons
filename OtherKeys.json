@@ -14,7 +14,7 @@
             }
           ],
           "from": {
-            "key_code": "p",
+            "key_code": "open_bracket",
             "modifiers": {
               "optional": [
                 "any"
@@ -37,7 +37,7 @@
             }
           ],
           "from": {
-            "key_code": "semicolon",
+            "key_code": "quote",
             "modifiers": {
               "optional": [
                 "any"
@@ -138,6 +138,94 @@
           ]
         }
       ]
+    },
+    {
+      "description": "MoveLeftOperationSpace: VK1 + m. MoveRightOperationSpace: VK1 + 「.」. ",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Enter: VK1 + ;",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
+
+
+
